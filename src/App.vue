@@ -1,10 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <el-container>
+      <el-aside>
+        <el-menu id="nav">
+          <el-menu-item>
+            <router-link to="/">Home</router-link>
+          </el-menu-item>
+          <el-menu-item>
+            <router-link to="/about">About</router-link>
+          </el-menu-item>
+          <el-menu-item>
+            <router-link to="/table">Table</router-link>
+          </el-menu-item>
+          <el-menu-item>
+            <router-link to="/form">Form</router-link>
+          </el-menu-item>
+          <el-menu-item>
+            <router-link to="/translator">Translator</router-link>
+          </el-menu-item>
+        </el-menu>
+      </el-aside>
+      <el-main>
+        <router-view />
+      </el-main>
+    </el-container>
   </div>
 </template>
 
@@ -15,17 +34,6 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  margin-top: 60px;
 }
 </style>
